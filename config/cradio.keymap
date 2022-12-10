@@ -56,7 +56,7 @@
             bindings = <&kp>, <&kp>;
         };
     };
-   
+};  
 
 #define COMBO(name, keypress, keypos) \
 combo_##name {                        \
