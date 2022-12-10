@@ -76,6 +76,7 @@ combo_##name {                        \
 
 	};
 };
+/ {
 	ZMK_BEHAVIOR(tl_0, macro,
     		wait-ms = <0>;
     		tap-ms = <0>;
@@ -118,7 +119,7 @@ combo_##name {                        \
                 	<&macro_release &to 3>,
                 	<&macro_tap &rgb_ug RGB_COLOR_HSB(300,100,50)>;
         )
-        
+}        
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
