@@ -70,7 +70,7 @@ combo_##name {                        \
 };
 / {
 	combos {
-
+		compatible = "zmk,combos";
 		// invoke macros
 		COMBO(tl_0,  &tl_0,   31  4)
 		COMBO(tl_1,  &tl_1,   31  3)
