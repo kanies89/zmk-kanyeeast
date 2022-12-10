@@ -142,6 +142,7 @@ combo_##name {                        \
         };
     };
 };
+/ {
     keymap {
         compatible = "zmk,keymap";
         default_layer {
