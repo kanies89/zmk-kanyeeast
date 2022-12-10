@@ -76,7 +76,7 @@ combo_##name {                        \
 
 	};
 };
-	lt_0: lt_0 {
+/ {	lt_0: lt_0 {
         compatible = "zmk,behavior-macro";
         label = "ZM_lt_0";
         #binding-cells = <0>;
@@ -139,7 +139,7 @@ combo_##name {                        \
             then-layer = <3>;
         };
     };
-
+};
     keymap {
         compatible = "zmk,keymap";
         default_layer {
