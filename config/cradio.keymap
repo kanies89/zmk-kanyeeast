@@ -69,10 +69,10 @@ combo_##name {                        \
 	combos {
 		compatible = "zmk,combos";
 		// invoke macros
-		COMBO(to_layer_0,  &to_layer_0,   31  4)
-		COMBO(to_layer_1,  &to_layer_1,   31  3)
-		COMBO(to_layer_2,  &to_layer_2,   31  2)
-		COMBO(to_layer_3,  &to_layer_3,   31  1)
+		COMBO(tolayer_0,  &tolayer_0,   31  4)
+		COMBO(tolayer_1,  &tolayer_1,   31  3)
+		COMBO(tolayer_2,  &tolayer_2,   31  2)
+		COMBO(tolayer_3,  &tolayer_3,   31  1)
 
 	};
 };
