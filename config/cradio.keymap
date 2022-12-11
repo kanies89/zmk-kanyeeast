@@ -58,6 +58,24 @@
         };
     };
 };  
+#define COMBO(name, keypress, keypos) \
+combo_##name {                        \
+	timeout-ms = <100>;                \
+	bindings = <keypress>;            \
+	key-positions = <keypos>;         \
+};
+
+/ {
+	combos {
+		compatible = "zmk,combos";
+		// invoke macros
+		COMBO(to_layer_0,  &to_layer_0,   31  4)
+		COMBO(to_layer_1,  &to_layer_1,   31  3)
+		COMBO(to_layer_2,  &to_layer_2,   31  2)
+		COMBO(to_layer_3,  &to_layer_3,   31  1)
+
+	};
+};
 
 / {	
     macros {
@@ -122,7 +140,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp TAB    &kp ENTER      &kp SPACE  &tolayer_3
+                                             &kp TAB    &kp ENTER      &kp SPACE  &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -139,7 +157,7 @@
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &tolayer_3
+                                             &trans     &kp ESC        &trans     &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -156,7 +174,7 @@
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
             &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &tolayer_3
+                                             &trans     &trans         &trans     &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -173,7 +191,7 @@
         //│          │ CLEAR BT │ PROFILE 2│ PROFILE 1│ PROFILE 0|   |          │          │          │          │          │
             &trans   &bt BT_CLR &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans     &trans     &trans     &trans      &trans   
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &kp BSPC
+                                             &trans     &trans         &trans    &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
