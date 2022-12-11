@@ -61,7 +61,7 @@
 
 / {	
     macros {
-        ZMK_MACRO(tol_0,
+            ZMK_MACRO(tol_0,
     	    wait-ms = <0>;
     	    tap-ms = <0>;
             bindings
